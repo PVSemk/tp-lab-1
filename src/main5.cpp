@@ -7,8 +7,6 @@
 
 int main() {
     std::cout << "Task 5" << std::endl;
-    char * pp = "12345";
-    std::cout << strlen(pp) << std::endl;
 
     char *buf="123,456,789";
     char **result1=nullptr;
