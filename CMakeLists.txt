@@ -27,11 +27,11 @@ set(SRC_FILES5 ${PROJECT_SOURCE_DIR}/src/task5.cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(task1_lib ${SRC_FILES1})
-add_library(task2_lib ${SRC_FILES2})
-add_library(task3_lib ${SRC_FILES3})
-add_library(task4_lib ${SRC_FILES4})
-add_library(task5_lib ${SRC_FILES5})
+add_library(task1_lib ${SRC_FILES1} include/task1.h)
+add_library(task2_lib ${SRC_FILES2} include/task2.h)
+add_library(task3_lib ${SRC_FILES3} include/task3.h)
+add_library(task4_lib ${SRC_FILES4} include/task4.h)
+add_library(task5_lib ${SRC_FILES5} include/task5.h)
 
 add_executable(task1 ${PROJECT_SOURCE_DIR}/src/main1.cpp)
 add_executable(task2 ${PROJECT_SOURCE_DIR}/src/main2.cpp)
