@@ -9,21 +9,22 @@
 
 void split(char ***result, int *N, char *buf, char ch) {
 
+    int len = (int)strlen(buf);
     *N = 1;
-    for (int i = 0; i < strlen(buf); i++) {
+    for (int i = 0; i < len; i++) {
         if (buf[i] == ch) {
             (*N)++;
         }
     }
 
-    char * newBuf = (char * ) std::malloc( strlen(buf) * sizeof(char) );
+    char * newBuf = (char * ) std::malloc( (len + 1)* sizeof(char) );
 
     *result = (char **) std::malloc( (*N) * sizeof(char*) );
 
 
     int size = 1;
     *(*result + 0) = newBuf;
-    for (int i = 0; i < strlen(buf); i++) {
+    for (int i = 0; i < len; i++) {
         newBuf[i] = buf[i];
         //std::cout << newBuf[i] << std::endl;
         if (newBuf[i] == ch) {
@@ -32,5 +33,6 @@ void split(char ***result, int *N, char *buf, char ch) {
             size++;
         }
     }
+    newBuf[len] = '\0';
 
 }
