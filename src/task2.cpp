@@ -1,4 +1,5 @@
-//
-// Created by maksim on 10/14/18.
-//
+#include <task2.h>
 
+bool checkPrime(unsigned int value) {
+    unsigned int a = value, b = value;
+}
