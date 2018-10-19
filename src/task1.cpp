@@ -1,5 +1,4 @@
 #include <task1.h>
-#include <cstdio>
 
 unsigned long int findValue(unsigned int min, unsigned int max) {
     unsigned long int value = min;
@@ -11,7 +10,6 @@ unsigned long int findValue(unsigned int min, unsigned int max) {
 
         }
     }
-    printf("%s %lu %c", "product is:", product, '\n');
     while (value <= product) {
         bool correct = true;
         for (unsigned long int i = min; i <= max; i++) {

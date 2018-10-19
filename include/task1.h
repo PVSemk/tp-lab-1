@@ -5,7 +5,7 @@
 #include <climits>
 
 /**
- * Find first unsigned long int a for which:
+ * Find first unsigned long int "a" for which:
  * a % i = 0
  * for all i in [min, .., max]
 */
