@@ -1,5 +1,5 @@
-#include <iostream>
 #include <task1.h>
+#include <iostream>
 
 int main() {
     unsigned long int test = findValue(1, 10);

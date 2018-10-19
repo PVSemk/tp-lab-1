@@ -1,6 +1,5 @@
 #ifndef TASK1_TASK2_H
 #define TASK1_TASK2_H
-#endif
 
 #include <cmath>
 #include <climits>
@@ -24,3 +23,5 @@ unsigned long long nextPrime(unsigned long long value);
  * Find n-th prime number in the multitude of natural numbers
  */
 unsigned long long nPrime(unsigned long long n);
+
+#endif

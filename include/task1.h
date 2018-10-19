@@ -1,6 +1,6 @@
 #ifndef TASK1_TASK1_H
 #define TASK1_TASK1_H
-#endif
+
 #include <cmath>
 #include <climits>
 
@@ -10,3 +10,5 @@
  * for all i in [min, .., max]
 */
 unsigned long int findValue(unsigned int min, unsigned int max);
+
+#endif

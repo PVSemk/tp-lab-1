@@ -1,4 +1,5 @@
-//
-// Created by maksim on 10/14/18.
-//
+#include <task4.h>
 
+std::string sum(std::string x, std::string y) {
+
+}

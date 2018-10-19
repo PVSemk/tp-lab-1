@@ -31,7 +31,7 @@ unsigned long long nextPrime(unsigned long long value){
     while (value <= ULLONG_MAX) {
         if (checkPrime(value)) {
             return value;
-        }
+        } else
         value++;
     }
     return NAN;
