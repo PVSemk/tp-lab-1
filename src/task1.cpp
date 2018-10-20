@@ -1,7 +1,4 @@
-
-
-#include <iostream>
-using namespace std;
+#include <task1.h>
 
 unsigned int __gcd(unsigned int a, unsigned int b) {
 	return (b ? __gcd(b, a % b) : a);
