@@ -29,9 +29,10 @@ void split(char ***result, int *ctr, char *buf, char ch) {
     }
     *(result) = (char**) malloc(res.size() * sizeof(char*));
     for (int i = 0; i < res.size(); i++) {
-        *(*(result)+i) = (char*) malloc(res[i].size() * sizeof(char));
+        *(*(result)+i) = (char*) malloc(res[i].size() * sizeof(char) + 1);
         for (int j = 0; j < res[i].size(); j++) {
             *(*(*(result)+i)+j) = res[i][j];
         }
+        *(*(*(result)+i)+res[i].size()) = '\0';
     }
 }

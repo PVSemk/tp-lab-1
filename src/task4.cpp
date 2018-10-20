@@ -58,9 +58,11 @@ char *sum(char *xx, char *yy) {
     if (sum[0]=='0') {
         sum.erase(std::find(sum.begin(), sum.end(), '0'));
     }
-    char *sumptr =(char*) std::malloc(sum.size() * sizeof(char));
+    char *sumptr =(char*) std::malloc(sum.size() * sizeof(char) + 1);
     for (int i = 0; i < sum.size(); i++) {
         *(sumptr+i) = sum[i];
     }
+    *(sumptr+sum.size()) = '\0';
+    std::printf("%x\n", sumptr);
     return sumptr;
 }
