@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <algorithm>
-#include <task.4h>
+#include <task4.h>
 
 char * sum(char *x, char *y) {
 	int xlen = strlen(x), ylen = strlen(y), extraone = 0, cur = 0, newlen;
