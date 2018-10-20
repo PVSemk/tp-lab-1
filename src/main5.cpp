@@ -8,7 +8,7 @@ int main() {
 	char **result = nullptr;
 	split(&result, &N, buf, ',');
 	std::cout << "N=" << N << '\n';
-	for (int i = 0; i <= N; i++) {
+	for (int i = 0; i < N; i++) {
 		std::cout << "result[" << i << "]=" << result[i] << '\n';
 	}
 }
