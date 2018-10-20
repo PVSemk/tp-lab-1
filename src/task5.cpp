@@ -6,7 +6,7 @@ void split( char ***result, int *N,const  char *buf, char ch)
 {
 	int sepCount = 0;
 	
-	for(int i=0;i<strlen(buf);i++)
+	for(int i=0;buf[i]!='\0';i++)
 	{
 		if (buf[i] == ch) {
 			sepCount++;
