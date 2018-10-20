@@ -1,5 +1,5 @@
 #include <task1.h>
-
+#include <iostream>
 unsigned int __gcd(unsigned int a, unsigned int b) {
 	return (b ? __gcd(b, a % b) : a);
 }
