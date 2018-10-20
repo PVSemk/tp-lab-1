@@ -1,8 +1,9 @@
 
 #include <iostream>
 using namespace std;
+#include <cstring>  
 
-typedef struct NUMB{
+struct NUMB{
 	int elem;
 	NUMB *prev;
 	
