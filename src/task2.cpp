@@ -43,7 +43,7 @@ unsigned long long nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	long long nextval = value + 2;
+	long long nextval = value + 1;
 	while (1)
 	{
 		if (checkPrime(nextval))
