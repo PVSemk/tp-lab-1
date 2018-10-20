@@ -1,7 +1,7 @@
 #ifndef task2_h
 #define task2_h
 
-#icnlude<cmath>
+#include<cmath>
 
 bool checkPrime(unsigned int value);
 
