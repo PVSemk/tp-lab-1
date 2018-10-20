@@ -1,4 +1,3 @@
-#ifndef task1_h
-#define task1_h
+#pragma once
+#include <iostream>
 unsigned long findValue(unsigned int min, unsigned max);
-#endif
