@@ -3,6 +3,6 @@
 
 #include <string>
 
-std::string sum(std::string x, std::string y);
+char *sum(char *xx, char *yy);
 
 #endif
