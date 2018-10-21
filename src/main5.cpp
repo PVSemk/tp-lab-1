@@ -16,7 +16,5 @@ int main()
 	cout << result[0] << endl;
 	cout << result[1] << endl;
 	cout << result[2] << endl;
-	getchar();
-	
 	return 0;
 }

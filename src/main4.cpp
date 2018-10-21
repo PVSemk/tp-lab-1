@@ -9,7 +9,6 @@ int main()
 	cout << "sum is ";
 	char *z=sum(x, y);
 	cout << z << " !"<<endl;
-	cout << strcmp(z, "123456790");
 	getchar();
 	
 	return 0;
