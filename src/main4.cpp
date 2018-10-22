@@ -1,6 +1,6 @@
 #include <task4.h>
 #include <iostream>
-
+using namespace std;
 int main()
 {
 	char A[] = "99999999999999999999";
