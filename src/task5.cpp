@@ -14,8 +14,8 @@ void split(char ***result, int *N, const char *buf, char ch)
 	}
 	*N = RazdCount+1;
 	int WaitForLastMas = 0;
-	char* massivs = new char[sizeof(char)*(RazdCount + 1)];
-	(*result) = new char*[sizeof(char)*(k + 1)];
+	char *massivs = (char *)malloc((RazdCount+1) * sizeof(char));
+	(*result) = (char**)malloc((k+1) * sizeof(char*));
 	(*result)[0] = massivs;
 	for (int i = 0, k = 1; buf[i] != '\0'; i++)
 	{
