@@ -37,7 +37,7 @@ char * sum(char *x, char *y)
 			k--;
 		}
 
-		strcpy_s(newmax, max + 1, x);
+		strcpy(newmax, x);
 	}
 
 	if (strlen(x) < strlen(y))
@@ -54,7 +54,7 @@ char * sum(char *x, char *y)
 			k--;
 		}
 
-		strcpy_s(newmax, max + 1, y);
+		strcpy(newmax, y);
 	}
 
 	char* a = new char[max + 1];
