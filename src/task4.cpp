@@ -1,5 +1,5 @@
 #include <iostream>
-char * sum(const char *x, const char *y)
+char * sum(char *x, char *y)
 {
 	int len1 = 0;
 	int len2 = 0;
