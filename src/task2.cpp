@@ -43,7 +43,7 @@ unsigned long long nPrime(unsigned n)
 			for (int k = 0; k < size; k++)
 				tmp[k] = numbers[k];
 
-			delete[] numbers;
+			
 
 			size *= 2;
 			numbers = tmp;
