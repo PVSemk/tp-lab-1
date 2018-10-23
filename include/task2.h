@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 bool checkPrime(unsigned int value); //проверка числа на простоту.
 unsigned long long nPrime(unsigned n);// нахождение n - ого простого числа(в ряду).

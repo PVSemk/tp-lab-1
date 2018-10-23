@@ -1,4 +1,6 @@
 #include <iostream>
+#include <math.h>
+
 using namespace std;
 unsigned long long sumPrime(unsigned int hbound);// сумма всех чисел до hbound(не включая его)
 bool checkPrime(unsigned int value); //проверка числа на простоту.
