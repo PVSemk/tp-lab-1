@@ -4,6 +4,8 @@
 
 bool checkPrime(unsigned int value)
 {
+	if ( value <= 3)
+		return true;
 	for (unsigned int i = 2; i < sqrt(value) + 1; i++)
 	{
 		if (value%i == 0)
