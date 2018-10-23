@@ -6,12 +6,20 @@ char * sum(char *x, char *y)
 	vector<int> a;
 	vector<int> b;
 	vector<int> tmp;
-	
-	for (int i = 0; i < strlen(x); i++)
+	int i = 0;
+	while (x[i] != '\0')
+	{	
 		a.push_back(x[i] - 48);
+		i++;
+	}
 	reverse(a.begin(), a.end());
-	for (int i = 0; i < strlen(y); i++)
+	i = 0;
+	while (y[i] != '\0')
+	{
 		b.push_back(y[i] - 48);
+		i++;
+	}
+	
 	reverse(b.begin(), b.end());
 	int s, inc = 0;
 	int k = max(a.size(), b.size());
