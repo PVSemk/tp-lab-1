@@ -1,6 +1,4 @@
 #include "../include/task3.h"
-#include "task2.cpp"
-
 using namespace std;
 
 unsigned long long sumPrime(unsigned int hbound) //сумма всех простых чисел до hbound (не включая его)
