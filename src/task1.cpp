@@ -19,11 +19,9 @@ unsigned long nok(unsigned int a1, unsigned b1)
 
 
 unsigned long findValue(unsigned int min, unsigned max) {
-	unsigned long long s = min;
-
-	for (; min <= max; min++) {
+	unsigned int s = min, dev;
+	for (; min < max; min++) {
 		s = nok(s, min);
 	}
-
 	return s;
 }
