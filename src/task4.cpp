@@ -1,1 +1,6 @@
-#include "task4.h"
+#include <task4.h>
+
+char* sum(char *x, char *y)
+{
+	return x;
+}
