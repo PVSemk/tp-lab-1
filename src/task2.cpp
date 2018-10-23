@@ -4,7 +4,7 @@
 
 bool checkPrime(unsigned int value)
 {
-	for (unsigned int i = 2; i < value / 2; i++)
+	for (unsigned int i = 2; i < sqrt(value) + 1; i++)
 	{
 		if (value%i == 0)
 			return false;	
