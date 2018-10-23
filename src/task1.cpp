@@ -1,4 +1,5 @@
 #include <iostream>
+#include "task1.h"
 
 unsigned long NOD(int long a, int long b)
 {
