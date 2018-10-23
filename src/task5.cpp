@@ -2,25 +2,30 @@
 #include <task5.h>
 
 void split(char ***result, int *N, char *buf, char ch) {
-	int i;
-	int number = 1;
-	for (i = 0; buf[i]; i++) {
-		if (buf[i] == ch) {
-			*N += 1;
+	int i = 0;
+	int n = 1;
+	int CounterOfRazdelitel = 0;
+	for (i = 0; buf[i] != '\0'; i++)
+	{
+		if (buf[i] == ch)
+		{
+			CounterOfRazdelitel++;
 		}
 	}
-	if (*N==0)
-		return; 
-	*N += 1;
-	char *memory = new char[i + 1];
+	if (CounterOfRazdelitel == 0)
+		return;
+	*N = CounterOfRazdelitel + 1;
+	char *mem = new char[i + 1];
 	*result = new char *[*N];
-	(*result)[0] = memory;
+	(*result)[0] = mem;
 	for (i = 0; buf[i]; i++) {
-		memory[i] = buf[i];
+		mem[i] = buf[i];
 		if (buf[i] == ch) {
-			tmp[i] = '\0';
-			(*result)[number] = memory + i + 1;
-			number++;
+			mem[i] = '\0';
+			(*result)[n] = mem + i + 1;
+			n++;
 		}
 	}
+	mem[i] = '\0';
+}
 }
