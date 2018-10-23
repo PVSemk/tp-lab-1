@@ -1,3 +1,4 @@
+include "../include/task1.h"
 unsigned long findValue(unsigned int min, unsigned max) {
 	setlocale(LC_ALL, "rus");
 	unsigned long t, a, b;
