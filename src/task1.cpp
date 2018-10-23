@@ -24,10 +24,3 @@ unsigned long findValue(unsigned int min, unsigned max)
 	}
 	return nok;
 }
-
-
-int main()
-{
-	std::cout << findValue(1, 20);
-	system("pause");
-}
