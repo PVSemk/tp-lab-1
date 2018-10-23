@@ -5,11 +5,10 @@
 
 unsigned long long sumPrime(unsigned int hbound)
 {
-	unsigned long long int sum = 0, i = 1;
-	while (nextPrime(i) < hbound)
+	unsigned long long int sum = 0;
+	for( int i = 0;  i < hbound / 2; i++)
 	{
 		sum = sum + nextPrime(i);
-		i = nextPrime(i);
 	}
 	return sum;
 
