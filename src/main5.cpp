@@ -1,12 +1,13 @@
+#include <task5.h>
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	char buf[] = "123.32.47549.1";
+	char buf[] = "123 32 47549 1";
 	int N = 0;
-	char ch = '.';
+	char ch = ' ';
 	char **result = nullptr;
 
 	split(&result, &N, buf, ch);
