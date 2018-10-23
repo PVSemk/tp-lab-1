@@ -1,4 +1,4 @@
-include "../include/task4.h"
+#include "../include/task4.h"
 char * sum(char *x, char *y) {
 	char *sum = new char[22];
 	unsigned int N;

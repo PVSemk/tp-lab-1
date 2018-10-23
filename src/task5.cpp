@@ -1,4 +1,4 @@
-include "../include/task5.h"
+#include "../include/task5.h"
 void split(char ***result, int *N, char *buf, char ch) {
 	int k = 0;
 	int number;
