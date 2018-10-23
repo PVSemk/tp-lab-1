@@ -1,7 +1,10 @@
 #include <task4.h>
 
-char* sum(char *x, char *y)
+using namespace std;
+#include <cstring>  
+
+
+char * sum(const char *x, const char *y)
 {
 	char *z = sum(x, y);
-	return x;
 }

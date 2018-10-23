@@ -1,10 +1,4 @@
-#include "task4.h"
-#include <iostream>
-#include <math.h>
-
-using namespace std;
-
-int main()
-{
-	char *z = sum(x, y);
-}
+#ifndef TASK1_TASK1_H 
+#define TASK1_TASK1_H 
+* sum(char *x, char *y);
+#endif  
