@@ -1,6 +1,6 @@
 #ifndef task2_h
 #define task2_h
-
+#include <cmath>
 
 bool checkPrime(unsigned int value);
 
