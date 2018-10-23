@@ -1,34 +1,26 @@
 #include <iostream>
 
-unsigned long NOD(unsigned int x, unsigned int y)
+unsigned long NOD(int long a, int long b)
 {
-	unsigned long n;
-	if (x == y)
-		return x;
-	long int z;
-	z = x - y;
-	if (z < 0)
-	{
-		z = -z;
-		n = NOD(x, z);
-	}
-	else n = NOD(y, z);
-	return n;
-}
+	while (a > 0 && b > 0)
 
-unsigned long NOK(unsigned int x, unsigned int y)
-{
-	return x * y / NOD(x, y);
+		if (a > b)
+			a %= b;
+
+		else
+			b %= a;
+
+	return a + b;
 }
 
 
 unsigned long findValue(unsigned int min, unsigned max)
 {
-	unsigned long nok = 1;
+	unsigned long long nok = 1;
 
 	for (int i = min; i <= max; i++)
 	{
-		nok = NOK(nok, i);
+		nok = nok * i / NOD(nok, i);
 	}
 	return nok;
 }
@@ -36,11 +28,6 @@ unsigned long findValue(unsigned int min, unsigned max)
 
 int main()
 {
-	int x, y;
-	x = 10;
-	y = 20;
-	int k = findValue(1,20);
-	std::cout << k;
+	std::cout << findValue(1, 20);
 	system("pause");
-
 }

@@ -31,11 +31,3 @@ unsigned long long nextPrime(unsigned long long value)
 		n++;
 	return n;
 }
-
-
-int main()
-{
-	int k;
-	k = nextPrime(2);
-	std::cout << k;
-}
