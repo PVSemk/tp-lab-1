@@ -10,10 +10,10 @@ int main()
 {
 	int N = NULL;
 	char **result = nullptr;
-	const char *buf = "98765.43.21";
+	const char *buf = "123,456,789";
 
 
-	split(&result, &N, buf, '.');
+	split(&result, &N, buf, ',');
 
 	cout << N << endl;
 
