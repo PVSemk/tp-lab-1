@@ -1,10 +1,25 @@
 #include <iostream>
-#include<algorithm>
 char * sum(const char *x, const char *y)
 {
-	int len1 = strlen(x);
-	int len2 = strlen(y);
-	int lenresult = std::max(len1, len2) + 1;
+	int len1 = 0;
+	int len2 = 0;
+	for (int i=0;x[i]!='\0';i++)
+	{
+		len1++;
+	}
+	for (int i = 0; y[i] != '\0'; i++)
+	{
+		len2++;
+	}
+	int lenresult = 0;
+	if (len1 > len2) 
+	{
+		lenresult = len1 + 1;
+	}
+	else
+	{
+		lenresult = len2 + 1;
+	}
 	int *a = new int[lenresult + 1];
 	int *b = new int[lenresult + 1];
 	char *result = new char[lenresult + 1];
