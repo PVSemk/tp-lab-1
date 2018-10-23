@@ -1,6 +1,6 @@
 #include <iostream>
 #include <task3.h>
-#include "task2.cpp"
+
 
 int main()
 {
