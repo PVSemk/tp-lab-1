@@ -3,10 +3,10 @@
 void split(char ***result, int *N, char *buf, char ch)
 {
 	int n = 0, i;
-	for (int i = 0; buf[i] != 0; i++)
+	for (i = 0; buf[i] != 0; i++)
 	{
 		if (buf[i] == ch)
-			i++;
+			n++;
 	}	
 	*N = n + 1;
 
