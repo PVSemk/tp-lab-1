@@ -18,5 +18,11 @@ int main()
 	res = checkPrime(13);
 	if (res) cout << "This is a prime number!" << endl;
 	else cout << "This is NOT a prime number!" << endl;
+
+	unsigned long long nPrimeRes = nPrime(21);
+	cout << "The 21 prime number is:" << nPrimeRes << endl;
+
+	unsigned long long nextPrimeRes = nextPrime(76);
+	cout << "The next prime number after 76 is:" << nextPrimeRes << endl;
 	return 0;
 }

@@ -5,7 +5,7 @@ using namespace std;
 //Проверка числа на простоту
 bool checkPrime(unsigned int value)
 {
-	for (int i = 2; i*i <= value; ++i)
+	for (unsigned int i = 2; i*i <= value; ++i)
 	{
 		if (value % i == 0)
 			return false;
