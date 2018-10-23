@@ -1,4 +1,4 @@
 #ifndef TASK4_H
 #define TASK4_H
-char * sum(const char *x, const char *y);
+char * sum(char *x, char *y);
 #endif 
