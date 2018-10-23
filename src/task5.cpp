@@ -2,9 +2,8 @@
 void split(char ***result, int *N, const char *buf, char ch)
 {
 	int k = 0;
-	int len = strlen(buf);
 	int RazdCount = 0;
-	for (int i = 0; i < len || buf[i] != '\0'; i++)
+	for (int i = 0;buf[i] != '\0'; i++)
 	{
 		if (buf[i] == ch)
 		{
