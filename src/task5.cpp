@@ -8,7 +8,8 @@ void split(char ***result, int *N, char *buf, char ch) {
 		if ((*(buf + number)) == '\0')break;
 		if ((*(buf + number)) == ch) (*N)++;
 	}
-	*result = new char*[*N+1];
+	*N++;
+	*result = new char*[*N];
 	for (int j = 0; j < number; j++) {
 		if ((*(buf + j)) == ch) {
 			a = new char[j - start];

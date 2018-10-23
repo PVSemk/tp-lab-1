@@ -11,7 +11,7 @@ int main()
 	cout << "Введите разделитель\n";
 	cin >> ch;
 	split(&ptr_res, &N, &str[0], ch);
-	for (int i = 0; i<(N + 1); i++) cout << ptr_res[i] << '\n';
+	for (int i = 0; i<N; i++) cout << ptr_res[i] << '\n';
 	system("pause");
 	return 0;
 }
