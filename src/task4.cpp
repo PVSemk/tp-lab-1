@@ -1,51 +1,129 @@
-#in#include <task4.h>
-char * sum(char *x, char *y) {
+#include <task4.h>
 
-	vector<int> tx;
-	vector<int> ty;
-	vector<int> t;
+using namespace std;
+#include <cstring>  
 
+struct NUMB {
+	int elem;
+	NUMB *prev;
+
+};
+
+char * sum(const char *x, const char *y)
+{
+	const char *tp;
+	int lenx = strlen(x) - 1;
+	int leny = strlen(y) - 1;
+	int maxlen;
+	if (lenx < leny)
+	{
+		tp = x;
+		x = y;
+		y = tp;
+		maxlen = leny;
+		leny = lenx;
+		lenx = maxlen;
+	}
+	else
+	{
+		maxlen = lenx;
+	}
+	NUMB *tail = (NUMB*)malloc(sizeof(NUMB));
+	tail->prev = NULL;
+	int sum, count = 0;
+	int carry = 0;
+	for (int i = 0; i <= maxlen; i++)
+	{
+		if (i == maxlen)
+		{
+			if (i <= leny)
+			{
+				count++;
+				sum = (x[lenx - i] - 48) + (y[leny - i] - 48);
+				sum = (sum + carry);
+				carry = sum / 10;
+				sum = sum % 10;
+				NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+				p->elem = sum;
+				p->prev = tail;
+				//p->next = NULL;
+				tail = p;
+				if (carry != 0)
+				{
+					count++;
+					NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+					p->elem = carry;
+					p->prev = tail;
+					//p->next = NULL;
+					tail = p;
+					break;
+				}
+				break;
+			}
+			else
+			{
+				count++;
+				sum = (x[lenx - i] - 48);
+				sum = (sum + carry);
+				carry = sum / 10;
+				sum = sum % 10;
+				NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+				p->elem = sum;
+				p->prev = tail;
+				//p->next = NULL;
+				tail = p;
+				if (carry != 0)
+				{
+					count++;
+					NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+					p->elem = carry;
+					p->prev = tail;
+					//p->next = NULL;
+					tail = p;
+					break;
+				}
+				break;
+			}
+
+		}
+		if (i <= leny)
+		{
+			count++;
+			sum = (x[lenx - i] - 48) + (y[leny - i] - 48);
+			sum = (sum + carry);
+			carry = sum / 10;
+			sum = sum % 10;
+			NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+			p->elem = sum;
+			p->prev = tail;
+			//p->next = NULL;
+			tail = p;
+		}
+		else
+		{
+			count++;
+			sum = (x[lenx - i] - 48);
+			sum = (sum + carry);
+			carry = sum / 10;
+			sum = sum % 10;
+			NUMB *p = (NUMB*)malloc(sizeof(NUMB));
+			p->elem = sum;
+			p->prev = tail;
+			//p->next = NULL;
+			tail = p;
+		}
+
+	}
 	int i = 0;
-	while (x[i] != '\0') {
-		tx.push_back(x[i] - 48);
+
+	char *res;
+	res = new char[count + 1];
+	while (tail->prev != NULL)
+	{
+		res[i] = tail->elem + 48;
+		tail = tail->prev;
 		i++;
 	}
-	reverse(tx.begin(), tx.end());
-
-	i = 0;
-	while (y[i] != '\0') {
-		ty.push_back(y[i] - 48);
-		i++;
-	}
-	reverse(ty.begin(), ty.end());
-
-	int ex = 0;
-	int n = max(tx.size(), ty.size());
-
-	for (int i = 0; i < n; i++) {
-		int sum = 0;
-
-		if (i < ty.size())
-			sum = ty[i];
-
-		if (i < tx.size())
-			sum = sum + tx[i];
-
-		t.push_back((ex + sum) % 10);
-		ex = (ex + sum) / 10;
-
-	}
-
-	if (ex != 0)
-		t.push_back(1);
-	n = t.size();
-	char *ans = new char[n + 1];
-
-	for (int i = t.size() - 1; i >= 0; i--)
-		ans[n - 1 - i] = (char)(t[i] + 48);
-
-	ans[n] = '\0';
-
-	return ans;
-
+	res[i] = 0;
+	return res;
 }
