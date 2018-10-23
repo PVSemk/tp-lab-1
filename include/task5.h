@@ -1,5 +1,4 @@
-﻿#include "../stdafx.h"
-#include <iostream>
+﻿#include <iostream>
 
 void split(char ***result, int *N, char *buf, char ch);
 /* разбиение строки buf на подстроки и запись
