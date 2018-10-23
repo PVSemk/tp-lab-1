@@ -2,7 +2,7 @@
 #include <task2.h>
 #include <cmath>
 
-bool checkPrime(unsigned int value)  //- проверка числа на простоту.
+bool checkPrime(unsigned int value)
 {
 	for (int i = 2; i<=sqrt(value); i = i ++)
 	{
@@ -11,9 +11,9 @@ bool checkPrime(unsigned int value)  //- проверка числа на простоту.
 	}
 	return true;
 }
-unsigned long long nPrime(unsigned n) //- нахождение n - ого простого числа(в ряду).
+unsigned long long nPrime(unsigned n)
 {
-	unsigned long long value = 1;
+	unsigned long long int value = 1;
 	int counter = 0;
 	while (counter != n)
 	{
@@ -25,7 +25,7 @@ unsigned long long nPrime(unsigned n) //- нахождение n - ого простого числа(в ря
 	}
 	return value;
 }
-unsigned long long nextPrime(unsigned long long value) //- нахождение ближайшего следующего простого числа к value.
+unsigned long long nextPrime(unsigned long long value)
 {
 	while (1)
 	{
