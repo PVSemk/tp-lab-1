@@ -4,57 +4,35 @@ using namespace std;
 
 void split(char ***result, int *N, char *buf, char ch)
 {
-	int nStr = 0;
-	int max = 0;
-	int tmp = 0;
+	*N = 0;//обнуляем счётчик
 
-	for (int i = 0; i < strlen(buf); i++)
+	for (int i = 0; buf[i]; i++)
+	if (buf[i] == ch) (*N)++;//подсчитываем
+
+	(*N)++;//+1, т. к. это разделители
+
+	char **tmp_result = new char*[*N];//временное хранение подстрок
+
+	for (int i = 0, length = 0, count = 0; buf[i]; i++)//главный цикл
 	{
-		if (buf[i] != ch) tmp++;
-		else
+		length++;//накапливаем длину текущей подстроки
+		if (buf[i] == ch || buf[i + 1] == 0)//если разделитель или конец строки
 		{
-			if (tmp > max) max = tmp;
-			tmp = 0;
+			tmp_result[count] = new char[length + 1];//выделяем память под это дело
+			for (int j = i - length + 1; j < i + 1; j++)
+			{
+				//и далее в нужном кусочке
+				if (buf[j] != ch)
+				{
+					//если это не разделитель
+					tmp_result[count][j - (i - length) - 1] = buf[j];//копируем его
+				}
+				else tmp_result[count][j - (i - length) - 1] = 0;//копируем его
+			}
+			tmp_result[count][length] = 0;//на конце строки нолик
+			length = 0;//начинаем заного
+			count++;//вновь будем заполять новую подстроку
 		}
 	}
-
-	for (int i = 0; i < strlen(buf); i++)
-	{
-		if (buf[i] == ch) nStr++;
-	}
-
-	*N = nStr + 1;
-
-	if (buf[strlen(buf) - 1] == ch) (*N)--;
-
-	char **arr = new char*[*N];
-
-	for (int i = 0; i < *N; i++)
-	{
-		arr[i] = new char[max + 1];
-	}
-
-	int row = 0;
-	int col = 0;
-
-	for (int i = 0; i <= strlen(buf); i++)
-	{
-		if (i == strlen(buf))
-		{
-			arr[*N - 1][col] = '\0';
-			break;
-		}
-		if (buf[i] != ch)
-		{
-			(arr[row][col]) = buf[i];
-			col++;
-		}
-		else
-		{
-			arr[row][col] = '\0';
-			col = 0;
-			row++;
-		}
-	}
-	*result = arr;
+	*result = tmp_result;//возвращаем
 }
