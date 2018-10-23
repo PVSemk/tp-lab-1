@@ -2,19 +2,19 @@
 
 void split(char ***result, int *N, char *buf, char ch)
 {
-	int n=0;
-	for (int i = 0; i < strlen(buf); i++)
+	int n = 0, i;
+	for (int i = 0; buf[i] != 0; i++)
 	{
 		if (buf[i] == ch)
-			n++;
-	}
+			i++;
+	}	
 	*N = n + 1;
 
-	char *tmp = new char[strlen(buf)];
+	char *tmp = new char[i+1];
 	*result = new char*[*N];
 	(*result)[0] = tmp;
 	int j = 1;
-	int i;
+	
 	for ( i = 0; buf[i] != '\0'; i++)
 	{
 		tmp[i] = buf[i];
