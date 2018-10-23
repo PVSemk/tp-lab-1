@@ -4,13 +4,12 @@
 
 bool checkPrime(unsigned int value)  //- проверка числа на простоту.
 {
-	bool prime = true;
-	for (int i = 2; i<sqrt(value); i = i + 1)
+	for (int i = 2; i<=sqrt(value); i = i ++)
 	{
 		if (value%i == 0)
-			prime = false;
+			return false;
 	}
-	return prime;
+	return true;
 }
 unsigned long long nPrime(unsigned n) //- нахождение n - ого простого числа(в ряду).
 {
