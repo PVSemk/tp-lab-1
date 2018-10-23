@@ -2,10 +2,9 @@
 #define TASK1_TASK4_H
 
 #include <iostream>
-#include <vector>
-#include <math.h>
-#include <cstring>
+#include <string>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
