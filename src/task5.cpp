@@ -1,4 +1,5 @@
 #include <iostream>
+#include <task5.h>
 void split(char ***result, int *N, const char *buf, char ch)
 {
 	int k = 0;

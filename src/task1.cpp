@@ -1,3 +1,4 @@
+#include <task1.h>
 unsigned long findValue(unsigned int min, unsigned max)
 {
 	int result = min;

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <task3.h>
 bool checkPrime(unsigned int value)
 {
 	if ((value == 2) or (value == 3))
