@@ -1,7 +1,7 @@
 #include "../include/task3.h"
 using namespace std;
 
-bool checkPrime(unsigned int value)
+bool checkkPrime(unsigned int value)
 {
 	for (unsigned int i = 2; i*i <= value; ++i)
 	{
@@ -17,7 +17,7 @@ unsigned long long sumPrime(unsigned int hbound) //сумма всех простых чисел до h
 	//hbound - Предел количества простых чисел, сумму которых мы хотим рассмотреть (max_amount_of_primes)
 	for (unsigned int i = 2; i < hbound; i++)
 	{
-		if (checkPrime(i)) sum += i;
+		if (checkkPrime(i)) sum += i;
 	}
 	return sum;
 }
