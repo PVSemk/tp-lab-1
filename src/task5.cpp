@@ -1,4 +1,4 @@
-#include <сstring>
+#include <string.h>
 void split(char ***result, int *N, char *buf, char ch) {
 	int len, k = 0;
 	len = strlen(buf);

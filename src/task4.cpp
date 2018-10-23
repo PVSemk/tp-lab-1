@@ -1,4 +1,4 @@
-#include <сstring>
+#include <string.h>
 char * sum(char *x, char *y) {
 	int f = 0, sum, lenX, lenY, len;
 	lenX = strlen(x);
