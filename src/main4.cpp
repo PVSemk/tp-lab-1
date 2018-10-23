@@ -1,15 +1,16 @@
-#include "task4.h"
-#include <iostream>
-using namespace std;
+#include <task4.h>
+
 
 int main()
 {
-	const char *x = "123456789";
-	const char *y = "000000001";
-	cout << "sum is ";
+	char *x = "99999999999999999999";
+	char *y = "1";
+
 	char *z = sum(x, y);
-	cout << z << " !" << endl;
-	getchar();
+
+	for (int i = 0; i < strlen(z); i++) {
+		cout << z[i];
+	}
 
 	return 0;
 }
