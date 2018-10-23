@@ -1,11 +1,11 @@
 #include <iostream>
 #include <task2.h>
-
+#include <cmath>
 
 bool checkPrime(unsigned int value)  //- проверка числа на простоту.
 {
 	bool prime = true;
-	for (int i = value-1; i>1; i = i - 1)
+	for (int i = 2; i<sqrt(value); i = i + 1)
 	{
 		if (value%i == 0)
 			prime = false;
