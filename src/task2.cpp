@@ -6,7 +6,7 @@ bool checkPrime(unsigned int value)
 		return true;
 	}
 	if ((value == 4) or (value == 6) or (value == 8) or (value == 10)) { return false; }
-	for (int i = 3; i <= sqrt(value); i += 2)
+	for (int i = 3; i <= value; i += 2)
 	{
 		if ((value % i == 0) or (value % 2 == 0))
 		{
