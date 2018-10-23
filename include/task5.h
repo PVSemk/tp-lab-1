@@ -1,0 +1,8 @@
+#ifndef TASK5_H
+#define TASK5_H
+
+#include <cstring>
+
+void split(char ***result, int *N, char *buf, char ch);
+
+#endif
