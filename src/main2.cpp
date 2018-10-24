@@ -1,4 +1,6 @@
 #include <task2.h>
+#include <iostream>
+using namespace std;
 
 int main() {
  	unsigned int example = 20;
