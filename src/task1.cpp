@@ -1,8 +1,8 @@
 #include <task1.h>
 
-int Nod(int a, int b)
+long long Nod(long long a, long long b)
 {
-	int t;
+	long long t;
    if (a<b) { t =a; a=b; b=t; }
    while(b!=0) {
      t = b;
@@ -12,10 +12,10 @@ int Nod(int a, int b)
    return a;
 }
 
-unsigned long findValue(unsigned int min, unsigned int max)
+unsigned long findValue(unsigned int min, unsigned max)
 {
-	long int value = 1;
-	for (int i = min; i < max; i++) {
+	long long value = 1;
+	for (int i = min; i <= max; i++) {
 		value = value*i / Nod(value, i);
 	}
 	return value;
