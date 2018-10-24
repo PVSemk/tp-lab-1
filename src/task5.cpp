@@ -1,7 +1,5 @@
 #include "../include/task5.h"
 
-using namespace std;
-
 void split(char ***result, int *N, char *buf, char ch)
 {
 	*N = 0;//обнуляем счётчик

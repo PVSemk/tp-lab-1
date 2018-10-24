@@ -1,12 +1,9 @@
 #pragma once
 
 #include <iostream>
-#include <string>
-#include <cstring>
-using namespace std;
-
 #include "../include/task4.h"
-#include "task4.cpp"
+
+using namespace std;
 
 int main()
 {

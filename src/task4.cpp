@@ -1,7 +1,5 @@
 #include "../include/task4.h"
 
-using namespace std;
-
 char *sum(char *x, char *y)
 {
 	int x_len = 0;

@@ -1,7 +1,5 @@
 #include "../include/task1.h"
 
-using namespace std;
-
 unsigned long findValue(unsigned long min, unsigned long max)
 {
 	const unsigned long maximum = 1000000000;//До скольки будем проходить,

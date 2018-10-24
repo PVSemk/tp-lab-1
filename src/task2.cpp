@@ -1,7 +1,5 @@
 #include "../include/task2.h"
 
-using namespace std;
-
 //Проверка числа на простоту
 bool checkPrime(unsigned int value)
 {
