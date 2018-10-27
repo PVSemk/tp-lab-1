@@ -3,7 +3,7 @@
 #include <iostream> 
 
 
-//using namespace std;
+using namespace std;
 
 unsigned long findValue(unsigned int min, unsigned max){
 	
@@ -14,7 +14,7 @@ unsigned long findValue(unsigned int min, unsigned max){
 		cout << "b(" << i << ")=" << b << endl;
 		x = nok*b;
 		nod = b;
-		std::cout << "x(" << i << ")=" << x << endl;
+		cout << "x(" << i << ")=" << x << endl;
 		while (nok != nod) {
 			if (nok > nod) {
 				unsigned long tmp = nok;
@@ -24,10 +24,10 @@ unsigned long findValue(unsigned int min, unsigned max){
 			nod = nod - nok;
 		}
 		
-		std::cout << "NOD("<< i<< ")="<< nod << endl;
+		cout << "NOD("<< i<< ")="<< nod << endl;
 		
 		nok =x/nod ;
-		std::cout << "NOK(" << i << ")=" << nok << endl;
+		cout << "NOK(" << i << ")=" << nok << endl;
 		i++;
 	}
 	return nok;
