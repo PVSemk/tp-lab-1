@@ -2,7 +2,7 @@
 
 #include <iostream> 
 #include "task2.h"
-#include <cmath>
+
 
 unsigned long long sumPrime(unsigned int hbound){
 	unsigned long long sum=0;
