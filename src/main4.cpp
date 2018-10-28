@@ -12,5 +12,9 @@ int main()
 	cout << "Enter string2:" << endl;
 	cin >> mas2;
 	cout <<sum(mas1, mas2) ;
+<<<<<<< HEAD
+=======
+	_getch();
+>>>>>>> d1230de8148b354d8de3829749841363d285e681
 	return 0;
 }
