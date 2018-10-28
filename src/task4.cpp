@@ -6,9 +6,15 @@ using namespace std;
 char * sum(char *x, char *y){
 	int length;
 	int n;
-	int len_x = strlen(x) - 1, len_y=strlen(y)-1;
-	if (strlen(x) > strlen(y)) length = strlen(x);
-	else length = strlen(y);
+	//int len_x = strlen(x) - 1, len_y=strlen(y)-1;
+	for (int i=0;x[i]<NULL;i++){
+		len_x=i;
+	}
+	for (int i=0;y[i]<NULL;i++){
+		len_y=i;
+	}
+	if (len_x > len_y) length = len_x+1;
+	else length = len_y+1;
 	char *mas = new char[length];
 	for (int i = 0; i <= length; i++){
 		mas[i] = '0';
@@ -30,7 +36,7 @@ char * sum(char *x, char *y){
 	}
 	
 	if (mas[0] == '0'){
-		for (int i = 0; i < strlen(mas); i++){
+		for (int i = 0; i < lenght; i++){
 			mas[i] = mas[i + 1];
 		}	
 		mas[length] = NULL;
