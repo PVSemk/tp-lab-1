@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 
 #include <iostream> 
-=======
-// task4.cpp: определяет точку входа для консольного приложения.
-//
-
-#include "stdafx.h"
-#include <iostream> 
-#include "conio.h" 
->>>>>>> d1230de8148b354d8de3829749841363d285e681
 
 using namespace std;
 
