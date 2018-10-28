@@ -1,28 +1,28 @@
 
 #include <iostream>
+#include <cstring> 
  
 using namespace std;
 void split(char ***result, int *N, const char *buf, char ch)
 {
 	int n = 0;
-	//int len = strlen(buf);
-	int i;
-	for (i = 0; buf[i]<NULL; i++)
+	int len = strlen(buf);
+	for (int i = 0; i<len; i++)
 	{
 		if (ch == buf[i]) ++n;
 	}
-	char *str = new char[i];
-	str[i] = NULL;
+	char *str = new char[len];
+	str[len] = NULL;
 	(*result) = new char*[n + 1];
 	(*result)[0] = str;
 	n = 1;
-	for (int j = 0;buf[j]<NULL ; j++)
+	for (int i = 0; i < len; i++)
 	{
-		str[j] = buf[j];
-		if (buf[j] == ch)
+		str[i] = buf[i];
+		if (buf[i] == ch)
 		{
-			(*result)[n] = str + (j + 1);
-			str[j] = NULL;
+			(*result)[n] = str + (i + 1);
+			str[i] = NULL;
 			++n;
 		}
 	}
