@@ -5,23 +5,24 @@ using namespace std;
 void split(char ***result, int *N, const char *buf, char ch)
 {
 	int n = 0;
-	int len = strlen(buf);
-	for (int i = 0; i<len; i++)
+	//int len = strlen(buf);
+	int i;
+	for (i = 0; buf[i]<NULL; i++)
 	{
 		if (ch == buf[i]) ++n;
 	}
-	char *str = new char[len];
-	str[len] = NULL;
+	char *str = new char[i];
+	str[i-1] = NULL;
 	(*result) = new char*[n + 1];
 	(*result)[0] = str;
 	n = 1;
-	for (int i = 0; i < len; i++)
+	for (int j = 0;buf[j]<NULL ; j++)
 	{
-		str[i] = buf[i];
-		if (buf[i] == ch)
+		str[j] = buf[j];
+		if (buf[j] == ch)
 		{
-			(*result)[n] = str + (i + 1);
-			str[i] = NULL;
+			(*result)[n] = str + (j + 1);
+			str[j] = NULL;
 			++n;
 		}
 	}
