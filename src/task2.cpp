@@ -12,15 +12,10 @@ bool checkPrime(unsigned int value){
 		if ((value == 1)||(value % 2 == 0)){
 			return false;
 		}
-		a = 5;
-		while (a <=sqrt(value)){
-			if (value%a == 0){
-				return false;
-			}
-			a=a+2;
+		for (long long k = 3; k <= sqrt(value); k += 2) {
+			if ((value % k) == 0) return false;
 		}
-	}
-	return true;
+		return true;
 }
 
 unsigned long long nPrime(unsigned n){
