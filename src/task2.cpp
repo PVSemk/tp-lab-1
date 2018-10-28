@@ -8,15 +8,15 @@ bool checkPrime(unsigned int value){
 		return true;
 	}
 	else {
-		a = value;
 		if ((value == 1)||(value % 2 == 0)){
 			return false;
 		}
-		while (a != 3){
-			a = a - 2;
+		a = 5;
+		while (a <=sqrt(value)){
 			if (value%a == 0){
 				return false;
 			}
+			a=a+2;
 		}
 	}
 	return true;
