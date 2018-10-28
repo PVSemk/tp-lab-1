@@ -1,5 +1,6 @@
 
 #include <iostream> 
+#include <cmath>
 
 using namespace std;
 bool checkPrime(unsigned int value){
