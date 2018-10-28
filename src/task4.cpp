@@ -36,7 +36,7 @@ char * sum(char *x, char *y){
 	}
 	
 	if (mas[0] == '0'){
-		for (int i = 0; i < lenght; i++){
+		for (int i = 0; i < length; i++){
 			mas[i] = mas[i + 1];
 		}	
 		mas[length] = NULL;
