@@ -1,9 +1,8 @@
 
 #include <iostream> 
+#include <cstring>
 
-using namespace std;
-#include <cstring> 
-
+ 
 char * sum(char *x, char *y){
 	int length;
 	int n;
