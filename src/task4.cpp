@@ -6,7 +6,7 @@ using namespace std;
 char * sum(char *x, char *y){
 	int length;
 	int n;
-	//int len_x = strlen(x) - 1, len_y=strlen(y)-1;
+	int len_x, len_y;
 	for (int i=0;x[i]<NULL;i++){
 		len_x=i;
 	}
