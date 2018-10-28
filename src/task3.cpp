@@ -1,9 +1,9 @@
 
-#include <cmath>
+
 #include <iostream> 
 #include "task2.h"
+#include <cmath>
 
-using namespace std;
 unsigned long long sumPrime(unsigned int hbound){
 	unsigned long long sum=0;
 	int a=0,k=0;	
