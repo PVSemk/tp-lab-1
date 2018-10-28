@@ -16,6 +16,7 @@ bool checkPrime(unsigned int value){
 			if ((value % k) == 0) return false;
 		}
 		return true;
+	}
 }
 
 unsigned long long nPrime(unsigned n){
