@@ -12,7 +12,7 @@ void split(char ***result, int *N, const char *buf, char ch)
 		if (ch == buf[i]) ++n;
 	}
 	char *str = new char[i];
-	str[i-1] = NULL;
+	str[i] = NULL;
 	(*result) = new char*[n + 1];
 	(*result)[0] = str;
 	n = 1;
