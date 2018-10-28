@@ -1,5 +1,5 @@
 
-
+#include <cmath>
 #include <iostream> 
 #include "task2.h"
 
