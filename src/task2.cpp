@@ -11,9 +11,8 @@ bool checkPrime(unsigned int value)
     // Убираем неинтересные варианты
     if (value == 0 || value == 1)
         return false;
-    // Любое составное число меньше value содержит хотя бы один делитель
-    // Который не превышает sqrt(value)
-    // Поэтому достаточно пробежать все числа от 2 до sqrt(value)
+    // Если value составное, то оно содержит хотя бы один делитель, не превышающий sqrt(value)
+    // Поэтому пробегаем лишь до этоо значения
     for(unsigned int i = 2; i*i <= value; i++)
         if (value % i == 0)
             return false;
