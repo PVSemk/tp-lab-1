@@ -29,7 +29,7 @@ unsigned long long nPrime(unsigned n)
     unsigned count(0);
     // Убираем неинтересные варианты
     list[0] = list[1] = false;
-    for (auto i(2); i*i <= SIZE; i++)
+    for (auto i(2); i <= SIZE; i++)
     {
         // Если на i-ой позиции стоит 1, то i - простое число
         if (list[i])
