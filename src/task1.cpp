@@ -12,7 +12,8 @@ unsigned long nod(unsigned long a,unsigned long b)
 // Пробегаем по диапазону и находим НОК для каждого числа по очереди
 unsigned long findValue(unsigned int min, unsigned max)
 {
-    // Первоначальное значение несущественнно
+    // Очевидно, искомое число не может быть меньше
+    // Чем минимальное число из диапазона
     unsigned long value(min);
     for (unsigned int i(min); i <= max; i++)
     {
